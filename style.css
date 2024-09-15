@@ -1,29 +1,34 @@
 *{
     padding:0;
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Gilroy;
     box-sizing: border-box;
 }
 main{
     background-color: #020202;
     color: #fff;
 }
-.hero-section{
-    height: 60px;
-    width: 100%;
+.nav{
+    height: 8vh;
+    width: 100vw;
     display: flex;
     background-color: #020202;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-.hero-section a{
+.nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}
+.nav-link a{
     text-decoration: none;
     color: #fff;
-    margin-right: 60px;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     position: relative;
 }
-.hero-section a::after{
+.nav-link a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -33,62 +38,121 @@ main{
     bottom: -6px;
     transition: 0.4s;
 }
-.hero-section a:hover::after
+.nav-link a:hover::after
 {
     width: 100%;
 }
-.portfoliologo{
-    font-size: 2.5rem;
+.nav-link i{
     color: #fcb300;
-    width: 700px;
-    margin-left: 80px;
+    font-weight: 600;
+    display: none;
+}
+.portfoliologo{
+    font-size:2.5vw;
+    color: #fcb300;
+    margin-left: 6.5vw;
 }
 .portfoliologo span{
     color: #fff;
 }
-.profile-pic{
-    height: 670px;
-    width: 100%;
-    background-image: url("SL_031721_41490_22.jpg");
-    background-size: cover;
+.nav-link button{
+    border: none;
+    font-size: 1.18vw;
+    font-weight: 500;
+    margin-right: 30px;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background: #fcb300;
+    transition: all 0.2s ease;
+}
+button:active {
+    transform: scale(0.96)
 }
 .home-page{
-    color:#fff;
- position: relative;
- top: 200px;
- left: 100px;
+    height:92vh;
+    width:100vw;
+    background-image: url("page1.jpg");
+    background-size: cover;
+    display: flex;
 }
-.home-page h2{
-    font-size: 1.5rem;
+.content-1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left:6.5vw;
+    margin-top: 10vw;
+    
+}
+.profile-pic{
+    width: 50%;
+}
+.profile-pic img{
+    height: 80vh;
+    margin-left: 9vw;
+    margin-top: 4vw;
+}
+.content-1 h2{
+    font-size: 1.3vw;
     color: #fff;
-    margin-bottom: 13px;;
+    margin-bottom: 10px;
+    
 }
-.home-page p{
-    font-size: 3.8rem;
+.content-1 p{
+    font-size: 3.8vw;
     color:#fcb300;
 }
-.home-page span{
-    font-size: 4rem;
+.content-1 span{
+    font-size: 4vw;
     color: #fff;
 }
-.page{
-    height: 694px;
-   background-image: url("page1.jpg");
-    background-size: cover;
+.content-1 button{
+    height: 3.5vw;
+    width: 10vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+    background-color: #fcb300;
+    color: #fff;
+    border: none;
+    border-radius:4px;
+    margin-top: 2vw;
+    line-height: 0;
 }
-.page h1{
+.page{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("page1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.content-2{
+    height: 100vh;
+    width: 60%;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.content-2 h1{
     font-size: 2.8rem;
     color: #fcb300;
-    position: relative;
-    top: 190px;
-    left: 595px;
+    align-self: flex-start;
+    margin-top: 11vw;
 }
 .para p{
-    position: relative;
-    top:235px;
-    left: 595px;
-    width: 650px;
+    width: 80%;
     font-size: 1.2rem;
+    align-self: flex-start;
+    margin-bottom: 20vw;
+}
+.page-2{
+    width: 40%;
+    margin-top: 4vw;
+}
+.page-2 img{
+    height: 80vh;
 }
 .contact{
     height: 694px;
@@ -139,13 +203,242 @@ main{
 }
 .foot-pannel{
     text-align: center;
-    font-size: 1.2rem;
-    position: relative;
-    top: 243px;
-    height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    height: 40px;
+    background-color: #2a2a2a;
+    color: #fff;
 }
 .foot-pannel :hover{
     color: #fcb300;
     transition: 0.4s;
     transform: scale(1.1,1.1);
+}
+.Foot-pannel1{
+    position: relative;
+    top:3px;
+}
+.Foot-pannel2{
+    position: relative;
+    top:5px;
+}
+.skill-progress{
+    height: 50px;
+    width: 90%;
+    border: 2px solid #fcb300;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-progress-bar{
+    height: 95%;
+    width: 97%;
+}
+.percantage{
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill-growth{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar{
+    height: 20%;
+    width: 100%;
+    border-radius: 4px;
+    background-color: crimson;
+    
+}
+@media (max-width:600px){
+.nav{
+    height: 8vh;
+     width: 100vw;
+    display: flex;    
+    background-color: #020202;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25vh;
+}
+.nav-link a{
+    display: none;
+}
+.nav-link button{
+    display: none;
+}
+    .nav-link i{
+        color: #fcb300;
+        font-weight: 600;
+        display: flex;
+        font-size: 3vh;
+        margin-right: 2.8vh;
+    }
+    .portfoliologo{
+        font-size:3.2vh;
+        color: #fcb300;
+    }
+    .portfoliologo span{
+        color: #fff;
+    }
+    
+    button:active {
+        transform: scale(0.96)
+    }
+    .home-page{
+        height:92vh;
+        width:100vw;
+        background-image: url("page1.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content-1{
+       
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 4vh; 
+    }
+    .profile-pic{
+        width: 50%;
+    }
+    .profile-pic img{
+        height: 30vh;
+        margin-left: 10vh;
+    }
+    .content-1 h2{
+        font-size: 1.3vh;
+        color: #fff;
+        margin-bottom: 10px;
+        
+    }
+    .content-1 p{
+        font-size: 5vh;
+        color:#fcb300;
+    }
+    .content-1 span{
+        font-size: 5vh;
+        color: #fff;
+    }
+    .content-1 button{
+        height: 3.5vw;
+        width: 10vw;
+        font-size: 1.3vw;
+        font-weight: 500;
+        background-color: #fcb300;
+        color: #fff;
+        border: none;
+        border-radius:4px;
+        margin-top: 2vw;
+        line-height: 0;
+    }
+    .page{
+        height: 100vh;
+        width: 100vw;
+        background-image: url("page1.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .content-2{
+        height: 100vh;
+        width: 60%;
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .content-2 h1{
+        font-size: 2.8rem;
+        color: #fcb300;
+        align-self: flex-start;
+        margin-top: 11vw;
+    }
+    .para p{
+        width: 80%;
+        font-size: 1.2rem;
+        align-self: flex-start;
+        margin-bottom: 20vw;
+    }
+    .page-2{
+        width: 40%;
+        margin-top: 4vw;
+    }
+    .page-2 img{
+        height: 80vh;
+    }
+    .contact{
+        height: 694px;
+        background-color: #121212;
+    }
+    .contact h1{
+        font-size: 2.8rem;
+        color: #fcb300;
+        position: relative;
+        top: 70px;
+        text-align: center;
+    }
+    .contact span{
+        color: #fff;
+    }
+    .box{
+        height: 200px;
+        width: 190px;
+        background-color: #fcb300;
+        border-radius: 20px;
+        
+    }
+    .contact-box{
+        height: 350px;
+        width: 750px;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        position: relative;
+        top: 90px;
+        left:355px;
+    }
+    .box i{
+        font-size: 70px;
+        color: #ffff;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top:40px ;
+        transition: 0.4s;
+    }
+    .contact a{
+        text-decoration: none;
+    }
+    .contact a :hover{
+        color:#e3e1e1;
+        transform: scale(1.2,1.2);
+    }
+    .foot-pannel{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.8rem;
+        height: 40px;
+        background-color: #2a2a2a;
+        color: #fff;
+    }
+    .foot-pannel :hover{
+        color: #fcb300;
+        transition: 0.4s;
+        transform: scale(1.1,1.1);
+    }
+    .Foot-pannel1{
+        position: relative;
+        top:3px;
+    }
+    .Foot-pannel2{
+        position: relative;
+        top:5px;
+    }
+    
 }
